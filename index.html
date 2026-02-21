@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="preload" href="assets/fonts/space-mono-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
@@ -12,27 +12,64 @@
 
   <body>
     <main>
+      <h1 class="main__heading">SPLI<br>TTER</h1>
       
+      <form class="main__calculator--dashboard">
+
+        <section class="main__bill--container">
+          <label for="bill">Bill</label>
+          <input type="text" class="input">
+        </section>
+
+        <section class="main__selection--container">
+
+          <label for="">Select Tip %</label>
+
+          <div class="main__selection--buttons">
+            <button type="button" class="select--btns">5%</button>
+            <button type="button" class="select--btns">10%</button>
+          </div>
+
+          <div class="main__selection--buttons">
+            <button type="button" class="select--btns">15%</button>
+            <button type="button" class="select--btns">25%</button>
+          </div>
+
+          <div class="main__selection--buttons">
+            <button type="button" class="select--btns">50%</button>
+            <input type="number" placeholder="Custom" class="custom--input">
+          </div>
+          
+        </section> 
+
+        <section class="main__count--container">
+          <label for="numberOfPeople">Number of People</label>
+          <input type="text" class="input">
+        </section>
+
+        <section class="main__output--card">
+          <section class="tip__amount--container">
+            <div>
+              <p class="output__card--heading">Tip Amount</p>
+              <p class="output__card--text">/ person</p>
+            </div>
+            <div class="tip--amount">$4.27</div>
+          </section>
+
+          <section class="total__amount--container">
+            <div>
+              <p class="output__card--heading">Total</p>
+              <p class="output__card--text">/ person</p>
+            </div>
+            <div class="total">$32.79</div>
+          </section>
+
+          <button type="reset" class="reset--btn">RESET</button>
+          
+        </section>
+
+      </form>
+     
     </main>
-
-    Bill
-
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
-
-    Number of People
-
-    Tip Amount
-    / person
-
-    Total
-    / person
-
-    Reset
   </body>
 </html>
