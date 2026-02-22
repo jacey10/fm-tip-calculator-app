@@ -11,8 +11,10 @@
   </head>
 
   <body>
-    <main>
-      <h1 class="main__heading">SPLI<br>TTER</h1>
+
+    <h1 class="main__heading">SPLI<br>TTER</h1>
+
+    <main class="main__content--wrapper">
       
       <form class="main__calculator--dashboard">
 
@@ -28,16 +30,11 @@
           <div class="main__selection--buttons">
             <button type="button" class="select--btns">5%</button>
             <button type="button" class="select--btns">10%</button>
-          </div>
-
-          <div class="main__selection--buttons">
             <button type="button" class="select--btns">15%</button>
             <button type="button" class="select--btns">25%</button>
-          </div>
-
-          <div class="main__selection--buttons">
             <button type="button" class="select--btns">50%</button>
             <input type="number" placeholder="Custom" class="custom--input">
+
           </div>
           
         </section> 
@@ -47,28 +44,29 @@
           <input type="text" class="input">
         </section>
 
-        <section class="main__output--card">
-          <section class="tip__amount--container">
-            <div>
-              <p class="output__card--heading">Tip Amount</p>
-              <p class="output__card--text">/ person</p>
-            </div>
-            <div class="tip--amount">$4.27</div>
-          </section>
+      </form>
 
-          <section class="total__amount--container">
-            <div>
-              <p class="output__card--heading">Total</p>
-              <p class="output__card--text">/ person</p>
-            </div>
-            <div class="total">$32.79</div>
-          </section>
-
-          <button type="reset" class="reset--btn">RESET</button>
-          
+      <section class="main__output--card">
+        <section class="tip__amount--container">
+          <div>
+            <p class="output__card--heading">Tip Amount</p>
+            <p class="output__card--text">/ person</p>
+          </div>
+          <div class="tip--amount">$4.27</div>
         </section>
 
-      </form>
+        <section class="total__amount--container">
+          <div>
+            <p class="output__card--heading">Total</p>
+            <p class="output__card--text">/ person</p>
+          </div>
+          <div class="total">$32.79</div>
+        </section>
+
+        <button type="reset" class="reset--btn">RESET</button>
+          
+      </section>
+
      
     </main>
   </body>
