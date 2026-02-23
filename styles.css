@@ -158,6 +158,8 @@ body {
   background-color: var(--clr-grey-50);
   padding: 0.5rem;
   border-radius: 0.4rem;
+  color: var(--clr-green-900);
+  font-size: var(--fs-form-input);
 }
 
 .main__selection--container {
@@ -185,6 +187,25 @@ body {
   padding: 0.5rem 3rem;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+
+.custom--input  {
+  background-color: var(--clr-grey-50);
+  color: var(--clr-green-900);
+  width: clamp(2.5rem, 1.5vw, 4rem);
+  padding: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .select--btn.active {
@@ -253,9 +274,5 @@ body {
     width: 100%;
     margin-block-end: 0;
     margin-inline: 0;
-    
   }
-
-
-
 }
