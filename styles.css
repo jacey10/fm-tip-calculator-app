@@ -108,6 +108,7 @@ textarea:not([rows]) {
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xlg: 2.5rem;
+  --space-xxlg: 3rem;
 }
 
 body {
@@ -132,7 +133,7 @@ body {
 }
 
 header {
-  margin-block: var(--space-lg);
+  margin-block: var(--space-xxlg);
 }
 
 
@@ -148,14 +149,15 @@ header {
 
 .input {
   all: unset;
+  width: 100%;
   background-color: var(--clr-grey-50);
-  padding-block: 0.5rem;
+  padding-block: 0.6rem;
+  padding-inline-end: 1rem;
+  box-sizing: border-box;
   border-radius: 0.4rem;
   color: var(--clr-green-900);
   text-align: right;
-  padding-inline: 0.8rem;
-  box-sizing: border-box;
-  width: 100%;
+  font-size: 1.6em;
 }
 
 .input--container {
@@ -222,7 +224,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  margin: 2rem 1.5rem;
+  margin: 2rem 1.5rem 1rem;
 }
 
 .output__card--heading {
@@ -256,6 +258,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 0.6rem 3rem;
   border-radius: 0.3rem;
   cursor: pointer;
+  margin-block-start: 0.5rem;
 }
 
 @media screen and (min-width: 37.5rem) and (max-width: 64rem) {
@@ -298,7 +301,6 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    font-size: 1.5rem;
   }
 
   .input {
@@ -321,12 +323,16 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 1.5rem;
   }
 
+  .tip__amount--container {
+    margin-block-start: 1.2rem;
+  }
+
   .tip--amount, .total {
-    font-size: 2rem;
+    font-size: 0.2em;
   }
 
   .reset--btn {
-    margin-block-start: 6.5rem;
+    margin-block-start: 4.5rem;
     font-size: 1em;
   }
 }
