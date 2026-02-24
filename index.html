@@ -12,62 +12,64 @@
 
   <body>
 
-    <h1 class="main__heading">SPLI<br>TTER</h1>
+    <header>
+      <img class="icon--logo" src="assets/images/logo.svg" alt="">
+    </header>
 
     <main class="main__content--wrapper">
       
       <form class="main__calculator--dashboard">
 
-        <section class="main__bill--container">
+        <div class="main__bill--container">
           <label for="bill">Bill</label>
           <div class="input--container">
             <img class="input--icon" src="assets/images/icon-dollar.svg" alt="">
-            <input type="text" class="input bill--input">
+            <input type="number" class="input bill--input">
           </div>
-        </section>
+        </div>
 
-        <section class="main__selection--container">
+        <div class="main__selection--container">
 
           <label for="">Select Tip %</label>
 
           <div class="main__selection--buttons">
-            <button type="button" class="select--btns">5%</button>
-            <button type="button" class="select--btns">10%</button>
-            <button type="button" class="select--btns">15%</button>
-            <button type="button" class="select--btns">25%</button>
-            <button type="button" class="select--btns">50%</button>
+            <button type="button" class="preset--btn">5%</button>
+            <button type="button" class="preset--btn">10%</button>
+            <button type="button" class="preset--btn">15%</button>
+            <button type="button" class="preset--btn">25%</button>
+            <button type="button" class="preset--btn">50%</button>
             <input type="number" placeholder="Custom" class="custom--input">
 
           </div>
           
-        </section> 
+        </div> 
 
-        <section class="main__count--container">
+        <div class="main__count--container">
           <label for="numberOfPeople">Number of People</label>
           <div class="input--container">
             <img class="input--icon" src="assets/images/icon-person.svg" alt="">
-            <input type="text" class="input">
+            <input type="number" class="input">
           </div>
-        </section>
+        </div>
 
       </form>
 
-      <section class="main__output--card">
-        <section class="tip__amount--container">
+      <div class="main__output--card">
+        <div class="tip__amount--container">
           <div>
             <p class="output__card--heading">Tip Amount</p>
             <p class="output__card--text">/ person</p>
           </div>
-          <div class="tip--amount">$4.27</div>
-        </section>
+          <div class="tip--amount"></div>
+        </div>
 
-        <section class="total__amount--container">
+        <div class="total__amount--container">
           <div>
             <p class="output__card--heading">Total</p>
             <p class="output__card--text">/ person</p>
           </div>
-          <div class="total">$32.79</div>
-        </section>
+          <div class="total"></div>
+        </div>
 
         <button type="reset" class="reset--btn">RESET</button>
           
