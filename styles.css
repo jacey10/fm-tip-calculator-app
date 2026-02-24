@@ -160,11 +160,27 @@ body {
   border-radius: 0.4rem;
   color: var(--clr-green-900);
   font-size: var(--fs-form-input);
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+
+.bill--input {
+  position: relative;
+}
+
+.icon--dollar {
+  position: absolute;
+  top: 14.5rem;
+  left: 10rem;
+ 
+  z-index: 100;
 }
 
 .main__selection--container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -183,7 +199,7 @@ body {
   all: unset;
   background-color: var(--clr-green-900);
   border: none;
-  width: clamp(2.5rem, 1.5vw, 4rem);
+  width: clamp(1rem, 2.5vw, 3rem);
   padding: 0.5rem 3rem;
   border-radius: 0.3rem;
   cursor: pointer;
@@ -192,8 +208,7 @@ body {
 .custom--input  {
   background-color: var(--clr-grey-50);
   color: var(--clr-green-900);
-  width: clamp(2.5rem, 1.5vw, 4rem);
-  padding: 0;
+  width: 8rem;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -206,6 +221,11 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.custom--input {
+  box-sizing: border-box;
+  padding: 8px 12px;
 }
 
 .select--btn.active {
@@ -250,29 +270,46 @@ input[type="number"] {
 
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 64rem) {
 
   .main__content--wrapper {
-    width: 70%;
+    width: 80vw;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns:  repeat(2, 1fr);
+    gap: 2rem;
     padding: 1rem;
     border-radius: 1rem;
     margin-block-end: 2rem;
   }
 
-  .main__selection--buttons {
-    grid-template-columns: repeat(3, 1fr);
+  .main__calculator--dashboard {
+    min-width: 30vw;
   }
 
-  .select--btns, .custom--input {
-    width: clamp(1.5rem, 2vw, 8rem);
+  .main__selection--buttons {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .main__output--card {
-    width: 100%;
+    min-width: 25vw;
     margin-block-end: 0;
     margin-inline: 0;
+    padding: 1.5rem;
   }
+
+  .reset--btn {
+    margin-block-start: 10rem;
+  }
+}
+
+@media screen and (min-width: 81.25rem) {
+  .select--btns {
+    min-width: clamp(3rem, 4.5vw, 7rem);
+  }
+
+  .custom--input {
+    min-width: clamp(7rem, 11.5vw, 11rem);
+  }
+
 }
