@@ -24,7 +24,7 @@
           <label for="bill">Bill</label>
           <div class="input--container">
             <img class="input--icon" src="assets/images/icon-dollar.svg" alt="">
-            <input type="number" min="0" step="0.01" id="bill" class="input valid bill--input" placeholder="0">
+            <input type="number" min="0" step="0.01" id="bill" class="input bill--input" placeholder="0">
           </div>
         </div>
 
@@ -32,7 +32,7 @@
 
           <label for="selectTip">Select Tip %</label>
 
-          <div class="main__selection--buttons">
+          <div class="main__tip--container">
             <button type="button" id="selectTip" class="preset--btn">5%</button>
             <button type="button" id="selectTip" class="preset--btn">10%</button>
             <button type="button" id="selectTip" class="preset--btn">15%</button>
@@ -40,7 +40,6 @@
             <button type="button" id="selectTip" class="preset--btn">50%</button>
             <label for="custom--tip" class="visually-hidden">Custom Tip Percentage</label>
             <input type="number" placeholder="Custom" id="custom--tip" class="custom--input">
-
           </div>
           
         </div> 
@@ -48,11 +47,11 @@
         <div class="main__count--container">
           <div class="error--label--container">
             <label for="numberOfPeople">Number of People</label>
-            <span id="errorMessage" class="error--message">Can't be zero</span>
+            <span id="errorMessage" class="error--message"></span>
           </div>
           <div class="input--container">
             <img class="input--icon" src="assets/images/icon-person.svg" alt="">
-            <input type="number" min="1" step="1" id="numberOfPeople" class="input invalid" placeholder="0">
+            <input type="number" min="1" step="1" id="numberOfPeople" class="input" placeholder="0">
           </div>
         </div>
 

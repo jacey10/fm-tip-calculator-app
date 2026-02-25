@@ -192,7 +192,7 @@ input.invalid {
   gap: 1rem;
 }
 
-.main__selection--buttons {
+.main__tip--container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -317,7 +317,7 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 2.5rem;
   }
 
-  .main__selection--buttons {
+  .main__tip--container {
     gap: 1rem;
   }
 
@@ -350,7 +350,7 @@ input[type="number"]::-webkit-inner-spin-button {
     padding-block: 0.5rem;
   }
 
-  .main__selection--buttons {
+  .main__tip--container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
