@@ -90,6 +90,7 @@ textarea:not([rows]) {
   --clr-grey-500: hsl(186, 14%, 43%);
   --clr-white: hsl(0, 100%, 100%);
   --clr-green-900: hsl(183, 100%, 15%);
+  --clr-red: hsl(4, 100%, 67%);
 
   /* == TYPOGRAPHY == */
 
@@ -136,6 +137,9 @@ header {
   margin-block: var(--space-xxlg);
 }
 
+.main__bill--container, .main__selection--container {
+  margin-block-end: 2rem;
+}
 
 .main__bill--container, .main__count--container {
   display: flex;
@@ -143,8 +147,8 @@ header {
   gap: 0.8rem;
 }
 
-.main__bill--container, .main__selection--container {
-  margin-block-end: 2rem;
+.main__count--container {
+  gap: 0.2rem;
 }
 
 .input {
@@ -171,6 +175,14 @@ header {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+}
+
+input.valid {
+  border: 2px solid var(--clr-green-400);
+}
+
+input.invalid {
+  border: 2px solid var(--clr-red);
 }
 
 .main__selection--container {
@@ -201,7 +213,24 @@ header {
 }
 
 .preset--btn.active {
-  color: var(--clr-grey-500);
+  background-color: var(--clr-green-400);
+}
+
+.preset--btn:hover {
+  background-color: var(--clr-grey-200);
+  color: var(--clr-green-900);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .custom--input  {
@@ -214,6 +243,16 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.error--label--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error--message {
+  color: var(--clr-red);
 }
 
 .main__output--card {
@@ -235,19 +274,18 @@ input[type="number"]::-webkit-inner-spin-button {
   color: var(--clr-grey-500);
 }
 
+.tip__amount--container, .total__amount--container {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-form-input);
+}
+
 .tip__amount--container {
   margin-block-start: 0.5rem;
 }
 
-
-.tip__amount--container, .total__amount--container {
-  display: flex;
-  justify-content: space-between;
-}
-
 .tip--amount, .total {
   color: var(--clr-green-400);
-  font-size: var(--fs-form-input);
 }
 
 .reset--btn {
@@ -259,6 +297,11 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 0.3rem;
   cursor: pointer;
   margin-block-start: 0.5rem;
+}
+
+.reset--btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.2;
 }
 
 @media screen and (min-width: 37.5rem) and (max-width: 64rem) {
@@ -328,11 +371,12 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .tip--amount, .total {
-    font-size: 0.2em;
+    font-size: 1.5em;
   }
 
   .reset--btn {
     margin-block-start: 4.5rem;
+    margin-block-end: 0.5rem;
     font-size: 1em;
   }
 }
