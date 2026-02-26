@@ -7,7 +7,9 @@ const tipAmountDisplay = document.getElementById('tipAmountPerPerson');
 const totalAmountDisplay = document.getElementById('totalAmountPerPerson');
 const resetBtn = document.getElementById('resetBtn');
 
-
+let billAmount = 0;
+let tipValue = 0;
+let numPeople = 0;
 
 
 
