@@ -177,12 +177,12 @@ header {
   pointer-events: none;
 }
 
-input.valid {
-  border: 2px solid var(--clr-green-400);
+.valid {
+  border: 0.125rem solid var(--clr-green-400);
 }
 
-input.invalid {
-  border: 2px solid var(--clr-red);
+.invalid {
+  border: 0.125rem solid var(--clr-red);
 }
 
 .main__selection--container {
@@ -223,10 +223,10 @@ input.invalid {
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.0625rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
