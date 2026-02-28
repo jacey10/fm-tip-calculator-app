@@ -237,6 +237,7 @@ input.invalid {
 .custom--input  {
   background-color: var(--clr-grey-50);
   color: var(--clr-green-900);
+  border: 0.125rem solid transparent;
 }
 
 .custom--input.valid {
