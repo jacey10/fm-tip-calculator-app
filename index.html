@@ -15,75 +15,76 @@
     <header>
       <img class="icon--logo" src="assets/images/logo.svg" alt="">
     </header>
+    
+    <main class="main__content--container">
+      <h1 class="sr-only main--heading">Tip Calculator App</h1>
 
-    <h1 class="sr-only main--heading">Time Tracking Dashboard</h1>
+      <section class="main__content--wrapper">
+        
+        <form class="main__calculator--dashboard">
 
-    <main class="main__content--wrapper">
-      
-      <form class="main__calculator--dashboard">
-
-        <div id="bill--container" class="main__bill--container">
-          <div class="error--label--container">
-            <label for="bill">Bill</label>
-            <span id="billErrorSpan" class="error--message"></span>
+          <div id="bill--container" class="main__bill--container">
+            <div class="error--label--container">
+              <label for="bill" class="label">Bill</label>
+              <span id="billErrorSpan" class="error--message"></span>
+            </div>
+            <div class="input--container">
+              <img class="input--icon" src="assets/images/icon-dollar.svg" alt="">
+              <input type="number" min="1" step="0.01" id="bill" class="input bill--input" placeholder="0">
+            </div>
           </div>
-          <div class="input--container">
-            <img class="input--icon" src="assets/images/icon-dollar.svg" alt="">
-            <input type="number" min="1" step="0.01" id="bill" class="input bill--input" placeholder="0">
+
+          <div class="main__selection--container">
+
+            <label for="selectTip" class="label">Select Tip %</label>
+
+            <div id="tip--container" class="main__tip--container">
+              <button type="button" data-tip="5" class="preset--btn">5%</button>
+              <button type="button" data-tip="10" class="preset--btn">10%</button>
+              <button type="button" data-tip="15" class="preset--btn">15%</button>
+              <button type="button" data-tip="25" class="preset--btn">25%</button>
+              <button type="button" data-tip="50" class="preset--btn">50%</button>
+              <label for="custom--tip" class="visually-hidden">Custom Tip Percentage</label>
+              <input type="number" placeholder="Custom" id="custom--tip" class="custom--input">
+            </div>
+            
+          </div> 
+
+          <div class="main__count--container">
+            <div class="error--label--container">
+              <label for="numberOfPeople" class="label">Number of People</label>
+              <span id="peopleErrorSpan" class="error--message"></span>
+            </div>
+            <div class="input--container">
+              <img class="input--icon" src="assets/images/icon-person.svg" alt="">
+              <input type="number" min="1" step="1" id="numberOfPeople" class="input people--input" placeholder="0">
+            </div>
           </div>
-        </div>
 
-        <div class="main__selection--container">
+        </form>
 
-          <label for="selectTip">Select Tip %</label>
-
-          <div id="tip--container" class="main__tip--container">
-            <button type="button" data-tip="5" class="preset--btn">5%</button>
-            <button type="button" data-tip="10" class="preset--btn">10%</button>
-            <button type="button" data-tip="15" class="preset--btn">15%</button>
-            <button type="button" data-tip="25" class="preset--btn">25%</button>
-            <button type="button" data-tip="50" class="preset--btn">50%</button>
-            <label for="custom--tip" class="visually-hidden">Custom Tip Percentage</label>
-            <input type="number" placeholder="Custom" id="custom--tip" class="custom--input">
+        <div class="main__output--card">
+          <div class="tip__amount--container">
+            <div class="tipKey">
+              <p class="output__card--heading">Tip Amount</p>
+              <p class="output__card--text">/ person</p>
+            </div>
+            <span id="tipAmountPerPerson" class="tip--amount">$0.00</span>
           </div>
-          
-        </div> 
 
-        <div class="main__count--container">
-          <div class="error--label--container">
-            <label for="numberOfPeople">Number of People</label>
-            <span id="peopleErrorSpan" class="error--message"></span>
+          <div class="total__amount--container">
+            <div class="tipKey">
+              <p class="output__card--heading">Total</p>
+              <p class="output__card--text">/ person</p>
+            </div>
+            <span id="totalPerPerson" class="total">$0.00</span>
           </div>
-          <div class="input--container">
-            <img class="input--icon" src="assets/images/icon-person.svg" alt="">
-            <input type="number" min="1" step="1" id="numberOfPeople" class="input people--input" placeholder="0">
-          </div>
-        </div>
 
-      </form>
+          <button type="reset" id="resetBtn" class="reset--btn" disabled>RESET</button>
+            
+        </section>
 
-      <div class="main__output--card">
-        <div class="tip__amount--container">
-          <div class="tipKey">
-            <p class="output__card--heading">Tip Amount</p>
-            <p class="output__card--text">/ person</p>
-          </div>
-          <span id="tipAmountPerPerson" class="tip--amount">$0.00</span>
-        </div>
-
-        <div class="total__amount--container">
-          <div class="tipKey">
-            <p class="output__card--heading">Total</p>
-            <p class="output__card--text">/ person</p>
-          </div>
-          <span id="totalPerPerson" class="total">$0.00</span>
-        </div>
-
-        <button type="reset" id="resetBtn" class="reset--btn" disabled>RESET</button>
-          
       </section>
-
-     
     </main>
   </body>
 </html>
