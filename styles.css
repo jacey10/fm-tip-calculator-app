@@ -343,7 +343,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: var(--clr-grey-200);
 }
 
-@media screen and (min-width: 37.5rem) and (max-width: 64rem) {
+@media screen and (min-width: 28.75rem) and (max-width: 57.5rem) {
   body {
     display: grid;
     place-items: center;
@@ -359,7 +359,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .main__content--wrapper {
-    width: 80%;
+    width: 90%;
     border-radius: 1.5rem;
     padding: 2.5rem 2.5rem 1.5rem;
   }
@@ -390,7 +390,7 @@ input[type="number"]::-webkit-inner-spin-button {
   
 }
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 57.5rem) {
 
   .main__content--wrapper {
     width: 82vw;
