@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jacey10/fm-tip-calculator-app)
-- Live Site URL: [Add live site URL here](https://jacey10.github.io/fm-tip-calculator-app/)
+- Solution URL: (https://github.com/jacey10/fm-tip-calculator-app)
+- Live Site URL: (https://jacey10.github.io/fm-tip-calculator-app/)
 
 ## My process
 
