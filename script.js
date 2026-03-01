@@ -19,12 +19,16 @@ peopleInput.addEventListener('input', handleInput);
 tipContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('preset--btn')) {
         const activeBtn = tipContainer.querySelector('.active');
-        if (activeBtn) {
+
+        if  (activeBtn === e.target) {
             activeBtn.classList.remove('active');
+            selectedTip = 0;
+        } else {
+            if (activeBtn) activeBtn.classList.remove('active');
+            e.target.classList.add('active');
+            selectedTip = parseFloat(e.target.dataset.tip);
         }
 
-        e.target.classList.add('active');
-        selectedTip = parseFloat(e.target.dataset.tip);
         customTipInput.value = '';
         handleInput();
     }
@@ -56,6 +60,9 @@ function validateBill(value) {
     } else if (value <= 0) {
         showError(billInput, "Bill must be greater than 0", billErrorEl);
         return false;
+    } else if ((value.toString().split('.')[1] || '').length > 2) {
+        showError(billInput, "Max 2 decimal places", billErrorEl);
+        return false;
     } else {
         clearError(billInput, billErrorEl);
         billInput.classList.add('valid');
@@ -65,6 +72,9 @@ function validateBill(value) {
 
 function validateCustomTip(value) {
     if (value < 0 ) {
+        showError(customTipInput);
+        return false;
+    } else if ((value.toString().split('.')[1] || '').length > 2) {
         showError(customTipInput);
         return false;
     } else {
@@ -78,12 +88,15 @@ function validatePeople(value) {
     if(!value || isNaN(value) || value < 1 ) {
         showError(peopleInput, "Can't be zero or less", peopleErrorEl);
         return false;
+    } else if (!Number.isInteger(value)) {
+        showError(peopleInput, "Must be a whole number", peopleErrorEl)
+        return false;
     } else {
         clearError(peopleInput, peopleErrorEl);
         peopleInput.classList.add('valid');
         return true;
-    }  
-}
+    } 
+}  
 
 function showError(inputEl, message = '', errorEl = null) {
     inputEl.classList.add('invalid');
