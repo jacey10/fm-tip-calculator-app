@@ -40,7 +40,6 @@ tipContainer.addEventListener('input', (e) => {
         selectedTip = parseFloat(e.target.value) || 0;
         handleInput();
     }
-
 });
     
 resetBtn.addEventListener('click', reset);
