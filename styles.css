@@ -410,16 +410,12 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   header {
-    margin-block: 2.5rem 2rem;
+    margin-block: 3rem 2rem;
   }
 
   .input {
     padding-block: 0.5rem;
   }
-
-  /*.people--input {
-    margin-block-end: 0.3rem;
-  }*/
 
   .main__tip--container {
     grid-template-columns: repeat(3, 1fr);
