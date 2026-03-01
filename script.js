@@ -13,7 +13,7 @@ const resetBtn = document.getElementById('resetBtn');
 let selectedTip = 0;
 
 // Event Listeners
-billInput.addEventListener('input', handleInput)
+billInput.addEventListener('input', handleInput);
 peopleInput.addEventListener('input', handleInput);
 
 tipContainer.addEventListener('click', (e) => {
@@ -48,7 +48,7 @@ resetBtn.addEventListener('click', reset);
 
 // Helper Functions
 function validateBill(value) {
-    if (value === '' || value === null) {
+    if (value === '') {
         showError(billInput, "Can't be empty", billErrorEl);
         return false;
     } else if (isNaN(value)) {
@@ -106,7 +106,7 @@ function handleInput () {
 
     const billValid = billInput.value ? validateBill(bill) : false;
     const peopleValid = peopleInput.value ? validatePeople(people) : false;
-    const tipValid = selectedTip  ? validateCustomTip(selectedTip) : false;
+    const tipValid = validateCustomTip(selectedTip);
     
     if (billValid && peopleValid && tipValid) {
         calculate(bill, people, selectedTip);
