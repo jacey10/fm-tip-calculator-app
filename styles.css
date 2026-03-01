@@ -225,6 +225,10 @@ input.invalid {
   text-align: center;
 }
 
+.preset--btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .preset--btn, .custom--input {
   all: unset;
   box-sizing: border-box;
@@ -239,7 +243,7 @@ input.invalid {
   background-color: var(--clr-green-400);
 }
 
-.preset--btn:hover {
+.preset--btn:not(.active):hover {
   background-color: var(--clr-grey-200);
   color: var(--clr-green-900);
 }
@@ -343,10 +347,12 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: var(--clr-grey-200);
 }
 
-@media screen and (min-width: 28.75rem) and (max-width: 57.5rem) {
+@media screen and (min-width: 28.75rem) {
   body {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--clr-grey-200);
   }
 
@@ -359,6 +365,9 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   .main__content--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     border-radius: 1.5rem;
     padding: 2.5rem 2.5rem 1.5rem;
@@ -394,6 +403,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .main__content--wrapper {
     width: 82vw;
+    max-width: 75rem;
     display: grid;
     grid-template-columns:  repeat(2, 1fr);
     grid-template-rows: 1fr;
