@@ -327,6 +327,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .tip--amount, .total {
   color: var(--clr-green-400);
+  /* Make the output text scale down regardless of number size */
+  word-break: break-all; 
+  overflow-wrap: break-word;
 }
 
 .reset--btn {
