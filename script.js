@@ -77,11 +77,14 @@ function validateCustomTip(value) {
     } else if ((value.toString().split('.')[1] || '').length > 2) {
         showError(customTipInput);
         return false;
+    } else if (value > 100) {
+        showError (customTipInput)
+        return false;
     } else {
         clearError(customTipInput)
         customTipInput.classList.add('valid');
         return true;
-    }   
+    }
 }
 
 function validatePeople(value) {
