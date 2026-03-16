@@ -102,7 +102,7 @@ function calculate (bill, people, selectedTip) {
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Jacey Blog](https://www.jacey.hashnode.dev/)
+- Frontend Mentor - [@jacey10](https://www.frontendmentor.io/profile/jacey10)
+- Twitter - [@jacey_muna](https://x.com/jacey_muna)
 
